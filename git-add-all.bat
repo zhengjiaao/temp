@@ -8,17 +8,30 @@ setlocal enabledelayedexpansion
 :: 添加多个远程地址
 set github=git@github.com:zhengjiaao/temp.git
 set gitee=git@gitee.com:zhengjiaao/temp.git
+set gitlab=
 
 :: 添加远程地址 解决github无法连接问题
-git remote rm origin
+if defined github (
+    git remote rm origin
+    echo add Remote origin: %github% ; %gitee%
+    git remote add origin %github%
+    git remote set-url --add origin %gitee%
+)
 
-git remote add origin %github%
+if defined github (
+    echo add Remote github: %github%
+    git remote add github %github%
+)
 
-git remote set-url --add origin %gitee%
+if defined gitee (
+    echo add Remote gitee: %gitee%
+    git remote add gitee %gitee%
+)
 
-git remote add github %github%
-
-git remote add gitee %gitee%
+if defined gitlab (
+    echo add Remote gitlab: %gitlab%
+    git remote add gitlab %gitlab%
+)
 
 
 
