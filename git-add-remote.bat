@@ -3,7 +3,7 @@
 setlocal enabledelayedexpansion
 @cd /d "%~dp0"
 
-:: 执行命令 ./git-add-all.bat
+:: 执行命令 ./git-add-remote.bat
 
 :: 添加多个远程地址
 set github=git@github.com:zhengjiaao/temp.git
