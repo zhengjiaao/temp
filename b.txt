@@ -1,0 +1,33 @@
+To gitee.com:zhengjiaao/temp.git
+error: failed to push some refs to 'git@gitee.com:zhengjiaao/temp.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=all/<branch> master
+
+
+$ git pull all master
+From github.com:zhengjiaao/temp
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+To gitee.com:zhengjiaao/temp.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@gitee.com:zhengjiaao/temp.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Everything up-to-date
+
