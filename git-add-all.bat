@@ -13,24 +13,21 @@ set gitlab=
 :: 添加远程地址 解决github无法连接问题
 if defined github (
     git remote rm origin
-    echo add Remote origin: %github% ; %gitee%
-    git remote add origin %github%
-    git remote set-url --add origin %gitee%
-)
-
-if defined github (
     echo add Remote github: %github%
     git remote add github %github%
+    git remote add origin %github%
 )
 
 if defined gitee (
     echo add Remote gitee: %gitee%
     git remote add gitee %gitee%
+    git remote set-url --add origin %gitee%
 )
 
 if defined gitlab (
     echo add Remote gitlab: %gitlab%
     git remote add gitlab %gitlab%
+    git remote set-url --add origin %gitlab%
 )
 
 
