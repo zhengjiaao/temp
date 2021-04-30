@@ -9,10 +9,16 @@ setlocal enabledelayedexpansion
 set github=git@github.com:zhengjiaao/temp.git
 set gitee=git@gitee.com:zhengjiaao/temp.git
 
-git remote rm origin
 
-git remote add origin %github%
+git remote rm origin
 
 git remote add all %github%
 
 git remote set-url --add all %gitee%
+
+git remote add origin %github%
+
+::git remote add origin %gitee%
+
+
+
