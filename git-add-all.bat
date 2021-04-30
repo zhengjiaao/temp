@@ -9,16 +9,16 @@ setlocal enabledelayedexpansion
 set github=git@github.com:zhengjiaao/temp.git
 set gitee=git@gitee.com:zhengjiaao/temp.git
 
-
+:: 添加远程地址 解决github无法连接问题
 git remote rm origin
-
-git remote add all %github%
-
-git remote set-url --add all %gitee%
 
 git remote add origin %github%
 
-::git remote add origin %gitee%
+git remote set-url --add origin %gitee%
+
+git remote add github %github%
+
+git remote add gitee %gitee%
 
 
 
